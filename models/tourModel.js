@@ -6,7 +6,9 @@ const tourSchema = mongoose.Schema({
     type: "string",
   },
 });
- 
+
+
+// tour model
 const Tour = mongoose.model('Tour', tourSchema);
 
 module.exports = Tour;
