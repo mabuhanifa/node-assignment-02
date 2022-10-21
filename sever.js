@@ -24,6 +24,7 @@ app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
 
+// errorHandler for unrecognized error types
 process.on("unhandledRejection", (error) => {
   console.log(error.name, error.message);
   app.close(() => {
