@@ -1,3 +1,3 @@
 const getRandomTour = (req, res) => {
-  res.send('djvfds');
+  res.send('hello world');
 };

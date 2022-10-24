@@ -7,7 +7,6 @@ const tourSchema = mongoose.Schema({
   },
 });
 
-
 // tour model
 const Tour = mongoose.model('Tour', tourSchema);
 

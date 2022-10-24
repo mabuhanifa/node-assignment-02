@@ -2,13 +2,11 @@ const express = require("express");
 
 const errorHandler = require("./middleware/errorHandler");
 
-const tourRouter = require("./routes/usersRoute");
-
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use("/user", tourRouter);
+app.use("/tour", tourRouter);
 
 app.get("/", (req, res) => {
   res.send("Node Application Server Running");
