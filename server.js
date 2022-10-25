@@ -1,12 +1,20 @@
 const express = require("express");
-
+const dotenv = require("dotenv").config();
 const errorHandler = require("./middleware/errorHandler");
+
 const tourRouter = require("./routes/tourRouter");
+const mongoose = require("mongoose");
 
 const app = express();
+
+mongoose.connect(process.env.MONGO_URI).then(() => {
+  console.log("MONGODB CONNECTED");
+});
+
 const port = process.env.PORT || 5000;
 
 app.use(express.json());
+
 app.use("/tour", tourRouter);
 
 app.get("/", (req, res) => {
