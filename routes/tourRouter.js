@@ -3,7 +3,7 @@ const { getRandomTour, createTour } = require("../controllers/tourControllers");
 
 const router = express.Router();
 
-router.route("/").get(getRandomTour);
+router.route("/api/v1/tour").get(getRandomTour);
 
 /**
  @apply creating tour
