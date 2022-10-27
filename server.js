@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000;
 
 app.use(express.json());
 
-app.use("/", tourRouter);
+app.use("/api/v1/tour", tourRouter);
 
 app.get("/", (req, res) => {
   res.send("Node Application Server Running");
