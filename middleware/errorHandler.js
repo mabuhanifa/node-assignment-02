@@ -1,5 +1,5 @@
 const errorHandler = (err, req, res, next) => {
-  res.send(err.message);
+  res.send(err);
 };
 
 module.exports = errorHandler;

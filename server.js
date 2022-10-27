@@ -32,9 +32,9 @@ app.listen(port, () => {
 });
 
 // errorHandler for unrecognized error types
-process.on("unhandledRejection", (error) => {
-  console.log(error.name, error.message);
-  app.close(() => {
-    process.exit(1);
-  });
-});
+// process.on("unhandledRejection", (error) => {
+//   console.log(error.name, error.message);
+//   app.close(() => {
+//     process.exit(1);
+//   });
+// });

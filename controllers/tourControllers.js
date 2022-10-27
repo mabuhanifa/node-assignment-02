@@ -1,5 +1,4 @@
 const Tour = require("../models/tourModel");
-const errorHandler = require("../middleware/errorHandler");
 const getRandomTour = (req, res) => {
   res.send({ a: "tour" });
 };
@@ -14,7 +13,11 @@ const createTour = async (req, res) => {
       data: result,
     });
   } catch (error) {
-    errorHandler(error);
+    res.status(400).json({
+      status: "failed",
+      message: "Tour could not created",
+      error: error.message,
+    });
   }
 };
 
