@@ -1,8 +1,14 @@
 const express = require("express");
-const getRandomTour = require("../controllers/tourControllers");
+const { getRandomTour, createTour } = require("../controllers/tourControllers");
 
 const router = express.Router();
 
 router.route("/").get(getRandomTour);
+
+/**
+ @apply creating tour
+
+**/
+router.route("/api/v1/tour").post(createTour);
 
 module.exports = router;
