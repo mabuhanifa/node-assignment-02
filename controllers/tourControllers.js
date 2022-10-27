@@ -1,7 +1,12 @@
 const Tour = require("../models/tourModel");
+
 const getRandomTour = (req, res) => {
   res.send({ a: "tour" });
 };
+
+/**
+ @apply creating tour
+**/
 
 const createTour = async (req, res) => {
   try {
