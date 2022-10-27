@@ -1,14 +1,14 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const errorHandler = require("./middleware/errorHandler");
-
+const colors = require("colors");
 const tourRouter = require("./routes/tourRouter");
 const mongoose = require("mongoose");
 
 const app = express();
 
 mongoose.connect(process.env.MONGO_URI).then(() => {
-  console.log("MONGODB CONNECTED");
+  console.log(`MONGODB CONNECTED`.red.bold);
 });
 
 const port = process.env.PORT || 5000;

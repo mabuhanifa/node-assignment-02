@@ -9,7 +9,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mohammed Abu Hanifa",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
