@@ -1,4 +1,5 @@
 const express = require("express");
+
 const { getRandomTour, createTour } = require("../controllers/tourControllers");
 
 const router = express.Router();
