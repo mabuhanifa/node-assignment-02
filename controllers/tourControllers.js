@@ -6,6 +6,7 @@ const getRandomTour = (req, res) => {
 
 /**
  @apply creating tour
+ method -> @POST
 **/
 
 const createTour = async (req, res) => {
